@@ -19,19 +19,19 @@ public class NumberWizard : MonoBehaviour
         Debug.Log(guess); // 1000 
         NextGuess();
         Debug.Log(guess); // 1000 
-        max = max + 1;
+        //max = max + 1;
         Debug.Log(guess); // 1001 
     }
 
     public void OnPressHigher()
     {
-        min = guess;
+        min = guess + 1;
         NextGuess();
     }
 
     public void OnPressLower()
     {
-        max = guess; //Then we assign max tue guess value
+        max = guess - 1; //Then we assign max tue guess value
         NextGuess(); // we then invoke and thus updaye next guess' value
     }
 
@@ -43,7 +43,7 @@ public class NumberWizard : MonoBehaviour
     void NextGuess()
     {
         //guess = (max + min) / 2; // Uses the max and min we inserted in the Gameplay element within Unity, = 500
-        guess = Random.Range(min, max);
+        guess = Random.Range(min, max + 1);
         guessText.text = guess.ToString(); // So, here we convert guess of type int to string, and store it in a string var.
     }
 }
