@@ -16,8 +16,8 @@ public class NumberWizard : MonoBehaviour
 
     void StartGame()
     {
-        guess = (max + min) / 2;
-        guessText.text = guess.ToString();
+        guess = (max + min) / 2; // Uses the max and min we inserted in the Gameplay element within Unity, = 500
+        guessText.text = guess.ToString(); // So, here we convert guess of type int to string, and store it in a string var.
         max = max + 1;
     }
 
@@ -41,6 +41,6 @@ public class NumberWizard : MonoBehaviour
     void NextGuess()
     {
         guess = (max + min) / 2;
-        guessText.text = guess.ToString();
+        guessText.text = guess.ToString(); // Here we update our string variable with the next guess' value.
     }
 }
