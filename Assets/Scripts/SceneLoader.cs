@@ -15,8 +15,10 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void EndScenes()
+    public void EndScenes() // This method calls the Applicaion Quit() method that quits the game. 
     {
         Application.Quit();
     }
 }
+
+// Application.Quit() documentation: https://docs.unity3d.com/ScriptReference/Application.Quit.html
